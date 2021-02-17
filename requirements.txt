@@ -1,0 +1,12 @@
+dfirtrack-api-client @ git+https://github.com/n3x77/dfirtrack-api-python-client.git@34f685851205bb323b42eac9a8a9e617aaeac13c
+flake8==3.8.4
+importlib-metadata==3.4.0
+mccabe==0.6.1
+pkg-resources==0.0.0
+pycodestyle==2.6.0
+pyflakes==2.2.0
+python-dateutil==2.8.1
+six==1.15.0
+typing-extensions==3.7.4.3
+urllib3==1.26.3
+zipp==3.4.0
