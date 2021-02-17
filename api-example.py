@@ -17,7 +17,7 @@ except ImportError as error:
 
 __author__ = 'Sven Pueschel - n3x77'
 __license__ = 'GNU General Public License v3.0'
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 
 def setupCli():
@@ -34,7 +34,7 @@ def setupCli():
     parser.add_argument('-k', '--apikey', help='Use API key for authentication instead \
          of username and password', type=str, metavar="APIKEY", required=False)
     parser.add_argument('-i', '--insecure', help='Disable SSL verification when using \
-        self-signed certs.', action="store", metavar="INSECURE", required=False)
+        self-signed certs.', action="store_true", required=False)
 
     # add some additional args
     parser.add_argument('--version', action="version", version="%(prog)s (version \
@@ -91,9 +91,9 @@ def main(args):
 
     try:
         r = api_instance.create_systemtype(systemtype=systemtype)
+        print("Systemtype object: {} has been successfully created.".format(r))
     except dfirtrackapi_client.ApiException as e:
         print(e)
-    print("Systemtype object: {} has been successfully created.".format(r))
 
     # Retrieve and print out all available systemtypes
     try:
